@@ -1,0 +1,111 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    /*background: url("backgrounds/1.jpg");*/
+    background-size: cover;
+    /*background-repeat: space;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.top-bar {
+    padding: 25px 0;
+}
+
+.top-bar ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-icon {
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+.pole {
+    margin: 0 auto;
+    width: -webkit-fill-available;
+    max-width: 1050px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+input {
+    color: #000;
+    margin: 0;
+    width: inherit;
+    border: none;
+    outline-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: inset 0 0 2px 2px #28282817;
+    box-shadow: inset 0 0 2px 2px #28282817;
+}
+
+.tablo {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 8px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(6, 1fr);*/
+    /*grid-gap: 8px;*/
+}
+
+.card {
+    background: #ffffff;
+    width: 10.5em;
+    height: 6em;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.card > img {
+    width: 50px;
+}
+
+.tablo a {
+    text-decoration: none;
+}
+
+.card p {
+    color: #000000;
+}
+
+@-moz-document url-prefix() {
+    input {
+        width: 98%;
+        margin: 0 auto;
+    }
+}

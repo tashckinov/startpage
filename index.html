@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>startpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div class="top-bar">
+        <ul>
+            <li><span class="weather-icon">{{weather_img}}</span>{{weather}}°</li>
+        </ul>
+    </div>
+    <div class="pole">
+        <input v-on:keyup.enter="search" type="text" v-model="search_line" id="line" spellcheck="false" autocomplete="off" autofocus>
+        <!--        <div class="message" v-on:click="document.getElementById('line').focus()"><p>-->
+        <!--            {{ localStorage.getItem('engine') }}</p></div>-->
+    </div>
+    <div class="tablo">
+        <a v-bind:href="'https://'+site" class="card" v-for="site in tablo"
+           v-bind:style="{background: getImage('colour',site)}">
+            <img v-if="getImage('img',site)" v-bind:src="getImage('img',site)"
+                 v-bind:style="{width:getImage('width',site)}"
+                 alt="">
+            <p v-else>{{site}}</p>
+        </a>
+    </div>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="script.js"></script>
+</body>
+</html>
